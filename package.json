@@ -1,0 +1,29 @@
+{
+  "name": "pluto",
+  "version": "1.0.1",
+  "description": "pluto layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Mateusz Markowski",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.2",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrkT10/pluto.git"
+  },
+  "keywords": [
+    "pluto"
+  ],
+  "bugs": {
+    "url": "https://github.com/MrkT10/pluto/issues"
+  },
+  "homepage": "https://github.com/MrkT10/pluto#readme"
+}

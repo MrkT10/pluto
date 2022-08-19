@@ -1,0 +1,456 @@
+//include
+// @import "~bootstrap/scss/bootstrap";
+@import "../utilities/_variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import "../../../node_modules/aos/src/sass/aos.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+//--------- general ---------
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+    transition: .3s ease all;
+}
+//
+h2,h3,h4{
+    color: $txt-color-main;
+}
+h2{
+    font-size: 32px;
+    font-weight: 200;
+}
+h3{
+    font-size: $font-l;
+    font-weight: 600;
+}
+h4{
+    font-size: $font-s;
+    color: $txt-color-third;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h5{
+    font-size: $font-xs;
+    color: $txt-color-fourth;
+    text-transform: uppercase;
+}
+p{
+    font-size: $font-m;
+    color: $txt-color-second;
+}
+//--------- global ---------
+.round-ico{
+    background-color: $detail-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+}
+.feed-ico{
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    position: relative;
+    i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.section{
+    padding: 2.5em 0 4em 0;
+    h2{
+        margin: 0.5em auto;
+    }
+}
+.btn-custom{
+    font-size: $font-s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 2px solid $txt-color-fifth;
+    padding: 1rem 0 1rem 2rem;
+    transition: 1s ease all;
+    i{
+        opacity: 0;
+        margin-left: 1rem;
+    }
+}
+.btn-custom:hover{
+    background-color: $lead-color;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 1rem 2rem 1rem 2rem;
+    i{
+        opacity: 1;
+    }
+}
+.lead-btn{
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+}
+//--------- navbar ---------
+.navbar{
+    .navbar-brand{
+        font-size: $font-s;
+        color: $txt-color-third;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .nav-item{
+        margin: 0 0.65rem;
+    }
+    .nav-link{
+        text-transform: uppercase;
+        font-size: $font-s;
+    }
+    .nav-link.active{
+        border-bottom: 2px solid $detail-color;
+    }
+    .navbar-search{
+        .search-btn{
+            transition: .5s ease color;
+            border: 0;
+            background-color: transparent;
+            margin-top: 5px;
+            font-size: $font-m;
+        }
+        .search-btn:hover{
+            color: $detail-color;
+        }
+    }
+}
+//--------- header ---------
+#header-bar{
+    background-color: $lead-color;
+    h2{
+        padding: 30px 0;
+        color: #fff;
+    }
+    .right{
+        margin: auto;
+        text-align: right;
+        color: #fff;
+        font-size: $font-s;
+        .breadcrumb{
+            flex-direction: row-reverse;
+            li:first-of-type {order: 1; margin-left: auto;}
+            a{
+                color: #fff;
+                opacity: .7;
+            }
+            a:hover{
+                opacity: 1;
+            }
+            .breadcrumb-item.active{
+                opacity: .4;
+            }
+        }
+    }
+}
+//--------- intro ---------
+#intro{
+    margin: .5em auto 2em auto;
+    h3{
+        margin-bottom: 1rem;
+    }
+}
+//--------- services ---------
+#services{
+    background-color: $lightbg-color;
+    .head{
+        text-align: center;
+        margin-bottom: 2.5em;
+        h2{
+            color: $txt-color-main;
+        }
+        .subtitle{
+            font-size: $font-l;
+            color: $txt-color-third;
+            max-width: 800px;
+            margin: 0 auto ;
+        }
+    }
+    .service-box{
+        display: flex;
+        text-align: left;
+        margin-bottom: 1.5em;
+        .round-ico{
+            margin: 0 1.25em;
+        }
+    }
+}
+//--------- capabilities ---------
+#skills{
+    .head{
+        text-align: center;
+        margin-bottom: 3rem;
+        h2{
+            margin: 0.5em auto 0 auto;
+        }
+    }
+    .skillbar{
+        .top{
+            display: flex;
+            justify-content: space-between;
+            h4{
+                display: inline-block;
+            }
+            h4:nth-of-type(2){
+                text-transform: capitalize;
+            }
+        }
+        .progress{
+            margin: 0.5rem 0 1.5rem 0;
+        }
+    }
+    .accordion{
+        h2{
+            margin: 0.5em auto 0 auto;
+        }
+        .accordion-button{
+            background-color: transparent;
+            padding: 0;
+            border-bottom: none;
+            box-shadow: none;
+            h3{
+                order: 2;
+            }
+        }
+        .accordion-button::after{
+            margin: 0 10px 10px 0;
+        }
+        .accordion-body{
+            text-align: left;
+        }
+    }
+}
+//--------- testimony carousel ---------
+#ppl-carousel{
+    padding: 0;
+    color: #453951;
+    .carousel-indicators{
+        bottom: 17%;
+        button{
+            border-radius: 50%;
+            border: 1px solid #fff;
+            background-color: transparent;
+        }
+        button.active{
+            background-color: #fff;
+            border: none;
+            padding: 1px;
+        }
+    }
+    .carousel-caption{
+        bottom: 50%;
+        transform: translateY(50%);
+        max-width: 800px;
+        margin: auto;
+        h2{
+            color: #fff;
+            margin-bottom: 1.75rem;
+        }
+    }
+}
+//--------- team ---------
+#team{
+    .head{
+        margin-bottom: 3rem;
+    }
+    text-align: center;
+    .team-box{
+        .wrapper{
+            text-align: left;
+            margin-top: 1rem;
+            a{
+                margin-right: 1rem;
+                color: #000;
+                opacity: .5;
+            }
+            a:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+//--------- clients ---------
+#clients{
+    background-color: $lightbg-color;
+    padding: 4em 0;
+    .text-box{
+        h2{
+            margin: 0.5em 0;
+        }
+    }
+    .img-box{
+        margin: auto;
+        text-align: center;
+        img:nth-of-type(1){
+            margin-bottom: 2em;
+        }
+    }
+}
+//--------- buy template ---------
+#buyit{
+    .container{
+        display: flex;
+        text-align: center;
+        p{
+            margin: auto 1em auto auto;
+            font-size: $font-xl;
+        }
+        button{
+            margin: auto auto auto 1em;
+        }
+    }
+}
+//--------- feed bar ---------
+#feed-bar{
+    background-color: $lead-color;
+    h4{
+        margin: auto;
+    }
+    .container{
+        padding: 1em 0;
+        
+        .feed-icons{
+            display: flex;
+            margin: auto 0;
+            h4{
+                margin-right: 2rem;
+                margin-left: 0;
+            }
+            .feed-ico{
+                margin: .5em;
+            }
+            .feed-ico:hover{
+                background-color: #fff;
+            }
+        }
+        .feed-form{
+            display: flex;
+            margin: auto 0;
+            h4{
+                white-space: nowrap;
+            }
+            .btn{
+                h4{
+                    color: #fff;
+                }
+            }
+            .form-control{
+                width: 300px;
+                margin: 0 0.65rem 0 2rem;
+                background-color: transparent;
+                border-color: $txt-color-third;
+                color: $txt-color-third;
+            }
+        }
+    }
+}
+//--------- footer ---------
+footer{
+    background-color: $footer-color;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    h4{
+        margin-bottom: 1.5em;
+    }
+    p{
+        color: $txt-color-fifth;
+    }
+    #scroll-btn{
+        position: absolute;
+        background-color: $detail-color;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 15px 24px;
+        right: 5em;
+        bottom: 1em;
+        opacity: .5;
+    }
+    #scroll-btn:hover{
+        opacity: 1;
+    }
+    .logo-container{
+        .logo-box{
+            margin-bottom: 1.5rem;
+            h3{
+                display: inline-block;
+                font-weight: 400;
+                letter-spacing: 2px;
+            }
+            img{
+                display: inline-block;
+                height: 40px;
+                margin-right: 0.5rem;
+                filter: grayscale(1);
+            }
+        }
+        h3, p{
+            color: #fff;
+            opacity: .2;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+//--------- mobile ---------
+@media (max-width: 1399.98px) {
+    #ppl-carousel .carousel-indicators{
+        bottom: 5%;
+    }
+}
+@media (max-width: 1199.98px) {
+    #ppl-carousel .carousel-indicators{
+        bottom: 2%;
+    }
+}
+@media (max-width: 991.98px) { 
+    #ppl-carousel h2{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    #feed-bar .container .feed-icons{
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+    #feed-bar .container .feed-form .form-control{
+        width: 100%;
+    }
+}
+@media (max-width: 767.98px) {
+    .section{
+        padding: 2.5em 2em 4em 2em;
+    }
+    #ppl-carousel h2{
+        font-size: 1rem;
+        margin-bottom: 0.75rem!important;
+    }
+    #ppl-carousel .carousel-indicators{
+        bottom: -12px;
+    }
+    #buyit .container{
+        flex-direction: column;
+    }
+    #buyit .container button{
+        margin: 2rem auto 0 auto;
+    }
+    footer{
+        text-align: center;
+    }
+}
